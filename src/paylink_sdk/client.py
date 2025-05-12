@@ -8,7 +8,7 @@ class PayLinkClient:
     Client for interacting with the PayLink MCP server.
     """
 
-    def __init__(self, server_url: str = "http://0.0.0.0:8050/sse"):
+    def __init__(self, server_url: str = "http://paylink-app.eastus.azurecontainer.io:8050/sse"):
         self.server_url = server_url
 
     @asynccontextmanager

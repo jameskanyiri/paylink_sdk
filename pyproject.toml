@@ -2,10 +2,9 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-
 [project]
 name = "paylink-sdk"
-version = "0.1.1"
+dynamic = ["version"]
 authors = [
   { name = "James Kanyiri", email = "jameskanyiridev@gmail.com" },
 ]
@@ -25,8 +24,7 @@ classifiers = [
   "Intended Audience :: Developers",
 ]
 dependencies = [
-    "mcp>=1.7.1",
-    
+  "mcp>=1.7.1",
 ]
 
 [project.optional-dependencies]
@@ -44,9 +42,8 @@ Homepage = "https://github.com/jameskanyiri/paylink-sdk"
 Repository = "https://github.com/jameskanyiri/paylink-sdk"
 Issues = "https://github.com/jameskanyiri/paylink-sdk/issues"
 
-
-[tool.hatch.metadata]
-allow-direct-references = true
+[tool.hatch.version]
+path = "src/paylink_sdk/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/paylink_sdk"]
