@@ -12,20 +12,20 @@ description = "Python SDK for interacting with the PayLink MCP Server"
 readme = "README.md"
 requires-python = ">=3.13"
 classifiers = [
-  "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
-  "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Intended Audience :: Developers",
+  "Development Status :: 4 - Beta",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Office/Business :: Financial",
 ]
 dependencies = [
   "mcp>=1.7.1",
 ]
+
+keywords = ["payment", "africa", "mpesa", "fintech", "mobile money", "mcp", "financial integration"]
+
 
 [project.optional-dependencies]
 dev = [
@@ -41,6 +41,9 @@ dev = [
 Homepage = "https://github.com/jameskanyiri/paylink-sdk"
 Repository = "https://github.com/jameskanyiri/paylink-sdk"
 Issues = "https://github.com/jameskanyiri/paylink-sdk/issues"
+Documentation = "https://github.com/jameskanyiri/paylink-sdk#readme"
+Changelog = "https://github.com/jameskanyiri/paylink-sdk#changelog"
+
 
 [tool.hatch.version]
 path = "src/paylink_sdk/__init__.py"
