@@ -85,8 +85,12 @@ def run_command(command, description=None):
 
 def clean_build_artifacts():
     """Clean up build artifacts"""
-    for directory in ["build", "dist", "*.egg-info"]:
+    for directory in ["dist"]:
         run_command(f"rm -rf {directory}", f"Cleaning {directory}")
+        
+    # Also remove __pycache__ folders
+    run_command("find . -type d -name '__pycache__' -exec rm -r {} +", "Removing __pycache__")
+    run_command("find . -type f -name '*.pyc' -delete", "Removing .pyc files")
 
 def main():
     parser = argparse.ArgumentParser(description="Build and publish paylink-sdk")

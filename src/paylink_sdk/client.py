@@ -8,7 +8,9 @@ class PayLinkClient:
     Client for interacting with the PayLink MCP server.
     """
 
-    def __init__(self, server_url: str = "http://paylink-app.eastus.azurecontainer.io:8050/sse"):
+    def __init__(
+        self, server_url: str = "http://0.0.0.0:8050/sse"
+    ):
         self.server_url = server_url
 
     @asynccontextmanager
@@ -35,8 +37,8 @@ class PayLinkClient:
         async with self.connect() as session:
             tools_result = await session.list_tools()
             return tools_result.tools
-        
-    async def call_tool(self, tool_name:str, tool_args:dict):
+
+    async def call_tool(self, tool_name: str, tool_args: dict):
         """Call a tool by name with arguments and return the results
 
         Args:
@@ -46,7 +48,7 @@ class PayLinkClient:
         Returns:
             Dict: result from the tool execution
         """
-        
+
         async with self.connect() as session:
             # Step 1: List available tools to confirm it exists
             tools_result = await session.list_tools()
@@ -56,5 +58,5 @@ class PayLinkClient:
                 raise ValueError(f"Tool '{tool_name}' not found in server's tool list.")
 
             result = await session.call_tool(tool_name, tool_args)
-            
+
             return result
