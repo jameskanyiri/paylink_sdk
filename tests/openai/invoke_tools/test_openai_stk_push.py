@@ -3,7 +3,7 @@ from paylink_sdk.openai_adapter.toolkit import PayLinkClient
 
 @pytest.mark.asyncio
 async def test_stk_push_invokes_successfully():
-    client = PayLinkClient("http://localhost:8050/sse")
+    client = PayLinkClient("http://localhost:8050/mcp")
 
     tool_args = {
         "phone_number": "254797357665",
