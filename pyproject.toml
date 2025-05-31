@@ -21,7 +21,7 @@ classifiers = [
   "Topic :: Office/Business :: Financial",
 ]
 dependencies = [
-  "mcp>=1.7.1",
+    "mcp>=1.9.2",
 ]
 
 keywords = ["payment", "africa", "mpesa", "fintech", "mobile money", "mcp", "financial integration"]

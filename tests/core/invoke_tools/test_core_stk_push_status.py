@@ -3,7 +3,7 @@ from paylink_sdk import PayLinkClient
 
 @pytest.mark.asyncio
 async def test_stk_push_status_successfully_checks():
-    client = PayLinkClient("http://localhost:8050/sse")
+    client = PayLinkClient("http://localhost:8050/mcp")
 
     # Replace this dynamically if you have a way to get the latest one
     tool_args = {
